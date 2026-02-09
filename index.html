@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Insurance & Annuities in Schuylkill County, PA | Latimore Life & Legacy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0a1628;
+            --deep-blue: #1e3a5f;
+            --gold: #d4a574;
+            --cream: #f8f5f0;
+            --white: #ffffff;
+            --gray: #6b7280;
+            --light-gray: #e5e7eb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            color: var(--navy);
+            background: var(--cream);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--deep-blue) 100%);
+            color: var(--white);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--deep-blue) 100%);
+            color: var(--white);
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(212, 165, 116, 0.1) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(212, 165, 116, 0.3);
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            animation: fadeInUp 0.8s ease 0.8s both;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .btn-primary:hover {
+            background: #c59564;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 165, 116, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--navy);
+        }
+
+        .services-section {
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+
+        .section-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--navy);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 4rem;
+        }
+
+        .services-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--cream);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 2px solid transparent;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold), var(--deep-blue));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card h3 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.75rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .ai-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, var(--deep-blue), var(--gold));
+            color: var(--white);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .learn-more {
+            color: var(--deep-blue);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+
+        .learn-more:hover {
+            gap: 1rem;
+        }
+
+        .digital-card-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--deep-blue) 100%);
+            color: var(--white);
+        }
+
+        .digital-card-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 3rem;
+            border: 1px solid rgba(212, 165, 116, 0.2);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .card-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .card-logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            border: 3px solid var(--gold);
+        }
+
+        .card-name {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            color: var(--gold);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-tagline {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .service-item {
+            padding: 0.75rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        .card-actions {
+            display: grid;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .card-btn {
+            padding: 1rem;
+            background: var(--gold);
+            color: var(--navy);
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .card-btn:hover {
+            background: #c59564;
+            transform: scale(1.05);
+        }
+
+        .commitment {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(212, 165, 116, 0.1);
+            border-left: 4px solid var(--gold);
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .ai-chat-widget {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+        }
+
+        .chat-button {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold), var(--deep-blue));
+            border: none;
+            color: var(--white);
+            font-size: 2rem;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chat-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .chat-modal {
+            display: none;
+            position: fixed;
+            bottom: 100px;
+            right: 2rem;
+            width: 380px;
+            max-height: 600px;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            z-index: 999;
+        }
+
+        .chat-modal.active {
+            display: flex;
+            flex-direction: column;
+            animation: slideIn 0.3s ease;
+        }
+
+        .chat-header {
+            background: linear-gradient(135deg, var(--navy), var(--deep-blue));
+            color: var(--white);
+            padding: 1.5rem;
+        }
+
+        .chat-body {
+            flex: 1;
+            padding: 1.5rem;
+            overflow-y: auto;
+            max-height: 400px;
+        }
+
+        .quick-actions {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .quick-action-btn {
+            padding: 1rem;
+            background: var(--cream);
+            border: 2px solid var(--light-gray);
+            border-radius: 12px;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .quick-action-btn:hover {
+            border-color: var(--gold);
+            background: var(--white);
+            transform: translateX(5px);
+        }
+
+        .story-section {
+            padding: 6rem 2rem;
+            background: var(--cream);
+        }
+
+        .story-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .story-image {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .story-container {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-list {
+                grid-template-columns: 1fr;
+            }
+
+            .chat-modal {
+                width: calc(100vw - 2rem);
+                right: 1rem;
+            }
+        }
+
+        footer {
+            background: var(--navy);
+            color: var(--white);
+            padding: 3rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section h4 {
+            font-family: 'Crimson Pro', serif;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: var(--white);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .service-modal {
+            background: var(--white);
+            border-radius: 30px;
+            padding: 3rem;
+            max-width: 700px;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: var(--cream);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            background: var(--gold);
+            color: var(--white);
+            transform: rotate(90deg);
+        }
+
+        .modal-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2.5rem;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-content {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        .modal-content h4 {
+            color: var(--navy);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .modal-content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal-cta {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--light-gray);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">Latimore Life & Legacy</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#digital-card">Contact</a></li>
+                <li><a href="#story">My Story</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Life Insurance & Annuities in Schuylkill County, PA</h1>
+            <p class="subtitle">Father | Survivor | Leader</p>
+            <p class="hero-description">Licensed Pennsylvania Life Insurance Agent (DOI #1268820) — Independent life insurance and annuity consultant serving Schuylkill County and surrounding Central PA, helping young families, retirees, and small businesses protect income and build long-term stability.</p>
+            
+            <div class="hero-badges">
+                <div class="badge">✓ PA Licensed (DOI #1268820)</div>
+                <div class="badge">✓ Global Financial Impact</div>
+                <div class="badge">✓ MBA Candidate</div>
+                <div class="badge">✓ 3 Counties Served</div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="https://globalfinancialimpact.fillout.com/t/tMz7ZcqpaZus" class="btn btn-primary">Book Free Consultation</a>
+                <a href="https://agents.ethoslife.com/invite/29ad1" class="btn btn-secondary">Get Instant Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section" id="services">
+        <h2 class="section-title">Life Insurance, Annuities & Financial Protection Services</h2>
+        <p class="section-subtitle">10 strategies to build, protect, and transfer wealth — now powered by AI assistance</p>
+
+        <div class="services-grid">
+            <div class="service-card" data-service="wealth">
+                <span class="ai-badge">🤖 AI-Powered Insights</span>
+                <h3>Tax-Advantaged Wealth Accumulation</h3>
+                <p>Build wealth using tax-deferred and tax-free growth strategies</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+
+            <div class="service-card" data-service="asset">
+                <span class="ai-badge">🤖 AI-Powered Insights</span>
+                <h3>Asset Protection & Plan Rollovers</h3>
+                <p>Protect wealth and roll over 401(k), 403(b), pension plans strategically</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+
+            <div class="service-card" data-service="education">
+                <span class="ai-badge">🤖 AI-Powered Insights</span>
+                <h3>College Education Funding</h3>
+                <p>Strategic funding for higher education without crippling debt</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+
+            <div class="service-card" data-service="debt">
+                <span class="ai-badge">🤖 AI-Powered Insights</span>
+                <h3>Debt Management</h3>
+                <p>Consolidation strategies to eliminate high-interest debt</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+
+            <div class="service-card" data-service="life">
+                <span class="ai-badge">🤖 AI-Powered Insights</span>
+                <h3>Life Insurance & Living Benefits</h3>
+                <p>Income replacement, critical illness, and final expense coverage</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+
+            <div class="service-card" data-service="estate">
+                <span class="ai-badge">🤖 AI-Powered Insights</span>
+                <h3>Estate & Legacy Planning</h3>
+                <p>Wealth transfer strategies and estate tax solutions</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+
+            <div class="service-card" data-service="indexed">
+                <span class="ai-badge">🤖 AI-Powered Insights</span>
+                <h3>Indexed Growth Strategies</h3>
+                <p>Market-linked growth with downside protection</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+
+            <div class="service-card" data-service="mortgage">
+                <span class="ai-badge">🤖 AI-Powered Insights</span>
+                <h3>Mortgage Protection</h3>
+                <p>Ensure your family keeps the home if something happens to you</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+
+            <div class="service-card" data-service="business">
+                <span class="ai-badge">🤖 AI-Powered Insights</span>
+                <h3>Business & Key-Person Insurance</h3>
+                <p>Protect your business from loss of critical personnel</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+
+            <div class="service-card" data-service="retirement">
+                <span class="ai-badge">🤖 AI-Powered Insights</span>
+                <h3>Retirement Income Strategies</h3>
+                <p>Guaranteed lifetime income with annuities and safe-money vehicles</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="digital-card-section" id="digital-card">
+        <h2 class="section-title" style="color: var(--white);">Connect With Jackson</h2>
+        <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Your digital business card — save it, share it, stay connected</p>
+
+        <div class="digital-card-container">
+            <div class="card-header">
+                <img src="https://raw.githubusercontent.com/jackson1989-design/1/main/hero.png" alt="Latimore Life & Legacy" class="card-logo">
+                <h3 class="card-name">Jackson M. Latimore Sr.</h3>
+                <p class="card-title">Independent Financial Consultant • Latimore Life & Legacy LLC</p>
+                <p style="color: rgba(255,255,255,0.8);">Schuylkill County, PA</p>
+                <p class="card-tagline">🛡️ Protection • 📈 Strategy • 🏛️ Legacy</p>
+            </div>
+
+            <div class="services-list">
+                <div class="service-item">Wealth Accumulation</div>
+                <div class="service-item">Asset Protection</div>
+                <div class="service-item">Education Funds</div>
+                <div class="service-item">Debt Management</div>
+                <div class="service-item">Life Insurance</div>
+                <div class="service-item">Living Benefits</div>
+                <div class="service-item">Estate Planning</div>
+                <div class="service-item">Indexed Growth</div>
+                <div class="service-item">Mortgage Protection</div>
+                <div class="service-item">Business Strategies</div>
+            </div>
+
+            <div class="card-actions">
+                <a href="https://globalfinancialimpact.fillout.com/t/tMz7ZcqpaZus" class="card-btn">🗣️ Talk with Jackson!</a>
+                <a href="mailto:jackson1989@latimorelegacy.com" class="card-btn">Send Secure Email</a>
+                <a href="tel:+18568951457" class="card-btn">Call Now</a>
+                <a href="sms:+18568951457" class="card-btn">Text Me</a>
+            </div>
+
+            <div class="commitment">
+                <strong>My Commitment:</strong> I'm not here to sell products — I'm here to deliver solutions. I help local families protect what they've built, grow with intention, and create a legacy that lasts — calmly and without pressure.
+                <br><br>
+                <strong>Protecting Today. Securing Tomorrow.</strong>
+                <br>
+                #TheBeatGoesOn
+            </div>
+        </div>
+    </section>
+
+    <section class="story-section" id="story">
+        <div class="story-container">
+            <div>
+                <img src="jackson-headshot.jpg" alt="Jackson M. Latimore Sr." class="story-image">
+            </div>
+            <div>
+                <h2 style="font-family: 'Crimson Pro', serif; font-size: 2.5rem; margin-bottom: 1.5rem;">My Story: Why Protection Matters</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                    During a college basketball game on December 7, 2010, my heart stopped. I went into sudden cardiac arrest at East Stroudsburg University. I was 22 years old.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                    I survived because athletic trainers had immediate access to an AED - placed there by the Gregory W. Moyer Defibrillator Fund after 15-year-old Greg Moyer died of cardiac arrest in 2000.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+                    That experience taught me that preparedness is everything. Financial protection isn't about selling policies - it's about ensuring families have what they need when the unexpected happens.
+                </p>
+                <a href="#digital-card" class="btn btn-primary">Work With Me</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Latimore Life & Legacy</h4>
+                <p>Protection-first strategies for working families, professionals, and local organizations across Central Pennsylvania.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#services">Services</a>
+                <a href="#digital-card">Contact</a>
+                <a href="#story">My Story</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><strong>Phone:</strong> (856) 895-1457</p>
+                <p><strong>Email:</strong> jackson1989@latimorelegacy.com</p>
+                <p><strong>Service Area:</strong> Schuylkill, Luzerne & Northumberland Counties, PA</p>
+            </div>
+            <div class="footer-section">
+                <h4>Get Started</h4>
+                <a href="https://globalfinancialimpact.fillout.com/t/tMz7ZcqpaZus">Book Consultation</a>
+                <a href="https://agents.ethoslife.com/invite/29ad1">Instant Quote</a>
+                <a href="https://hihello.me/p/1ac94c21-813c-48c0-a270-49f5b2cc31e7">Save My Contact</a>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+            <p>Licensed in Pennsylvania (DOI #1268820, NIPR #21638507). Independent contractor with Global Financial Impact. Products offered through appointed carriers. For educational purposes only; not tax or legal advice.</p>
+            <p style="margin-top: 1rem;">© 2026 Latimore Life & Legacy LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- AI Chat Widget -->
+    <div class="ai-chat-widget">
+        <button class="chat-button" onclick="toggleChat()">🤖</button>
+        <div class="chat-modal" id="chatModal">
+            <div class="chat-header">
+                <h3>🤖 Strategic Advisor</h3>
+                <p style="font-size: 0.9rem; opacity: 0.9;">How can I help you today?</p>
+            </div>
+            <div class="chat-body">
+                <div class="quick-actions">
+                    <button class="quick-action-btn" onclick="handleQuickAction('consultation')">
+                        📅 Book a Consultation
+                    </button>
+                    <button class="quick-action-btn" onclick="handleQuickAction('call')">
+                        📞 Call Jackson Now
+                    </button>
+                    <button class="quick-action-btn" onclick="handleQuickAction('text')">
+                        💬 Send a Text Message
+                    </button>
+                    <button class="quick-action-btn" onclick="handleQuickAction('services')">
+                        💼 Explore Services
+                    </button>
+                    <button class="quick-action-btn" onclick="handleQuickAction('quote')">
+                        💰 Get a Quote
+                    </button>
+                </div>
+                <p style="margin-top: 1.5rem; text-align: center; color: var(--gray); font-size: 0.9rem;">
+                    No bots, no runaround — real help, real answers.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Detail Modal -->
+    <div class="modal-overlay" id="serviceModal">
+        <div class="service-modal">
+            <button class="modal-close" onclick="closeServiceModal()">×</button>
+            <h2 class="modal-title" id="modalTitle"></h2>
+            <div class="modal-content" id="modalContent"></div>
+            <div class="modal-cta">
+                <p style="font-weight: 600; margin-bottom: 1rem;">Ready to learn more about this service?</p>
+                <a href="https://globalfinancialimpact.fillout.com/t/tMz7ZcqpaZus" class="btn btn-primary">Schedule a Free Consultation</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleChat() {
+            const modal = document.getElementById('chatModal');
+            modal.classList.toggle('active');
+        }
+
+        function handleQuickAction(action) {
+            switch(action) {
+                case 'consultation':
+                    window.open('https://globalfinancialimpact.fillout.com/t/tMz7ZcqpaZus', '_blank');
+                    break;
+                case 'call':
+                    window.location.href = 'tel:+18568951457';
+                    break;
+                case 'text':
+                    window.location.href = 'sms:+18568951457';
+                    break;
+                case 'services':
+                    document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
+                    toggleChat();
+                    break;
+                case 'quote':
+                    window.open('https://agents.ethoslife.com/invite/29ad1', '_blank');
+                    break;
+            }
+        }
+
+        const serviceDetails = {
+            wealth: {
+                title: "Tax-Advantaged Wealth Accumulation",
+                content: `
+                    <h4>Build Your Wealth Strategically</h4>
+                    <p>Smart wealth building isn't just about how much you earn — it's about how much you keep. Our tax-advantaged wealth accumulation strategies help you grow your assets while minimizing tax liability.</p>
+                    
+                    <h4>What We Offer:</h4>
+                    <ul>
+                        <li><strong>Indexed Universal Life (IUL) Policies:</strong> Tax-free growth potential tied to market indexes with downside protection</li>
+                        <li><strong>Tax-Deferred Annuities:</strong> Compound your money without annual tax drag</li>
+                        <li><strong>Roth Conversion Strategies:</strong> Strategic repositioning for tax-free retirement income</li>
+                        <li><strong>Cash Value Life Insurance:</strong> Build accessible wealth while maintaining death benefit protection</li>
+                    </ul>
+
+                    <h4>Why This Matters:</h4>
+                    <p>Every dollar you save in taxes is a dollar that compounds for your future. For working families in Schuylkill County, this can mean the difference between a comfortable retirement and financial uncertainty.</p>
+
+                    <h4>Who This Is For:</h4>
+                    <ul>
+                        <li>Young professionals building long-term wealth</li>
+                        <li>Small business owners seeking tax efficiency</li>
+                        <li>Families wanting to maximize college savings</li>
+                        <li>Anyone in a high tax bracket looking for legal tax reduction</li>
+                    </ul>
+                `
+            },
+            asset: {
+                title: "Asset Protection & Plan Rollovers",
+                content: `
+                    <h4>Protect What You've Built</h4>
+                    <p>Changing jobs? Retiring? Your 401(k) and pension plans need strategic management to avoid unnecessary taxes and ensure continued growth.</p>
+                    
+                    <h4>Rollover Solutions:</h4>
+                    <ul>
+                        <li><strong>401(k) to IRA Rollovers:</strong> Maintain tax-deferred status while gaining investment flexibility</li>
+                        <li><strong>403(b) Consolidation:</strong> Simplify multiple retirement accounts for better management</li>
+                        <li><strong>Pension Lump Sum Analysis:</strong> Determine if taking a lump sum or annuity makes sense</li>
+                        <li><strong>Roth Conversion Strategies:</strong> Convert traditional accounts to Roth for tax-free growth</li>
+                    </ul>
+
+                    <h4>Asset Protection Strategies:</h4>
+                    <ul>
+                        <li>Annuities with principal protection guarantees</li>
+                        <li>Life insurance with creditor protection features</li>
+                        <li>Strategic beneficiary designations</li>
+                        <li>Estate planning integration</li>
+                    </ul>
+
+                    <h4>Common Mistakes We Help You Avoid:</h4>
+                    <ul>
+                        <li>Taking distributions before rollover (triggering immediate taxes)</li>
+                        <li>Rolling into the wrong account type</li>
+                        <li>Missing 60-day rollover deadlines</li>
+                        <li>Leaving money in poorly performing former employer plans</li>
+                    </ul>
+                `
+            },
+            education: {
+                title: "College Education Funding",
+                content: `
+                    <h4>Fund Education Without Sacrificing Retirement</h4>
+                    <p>College costs continue to rise, but you don't have to choose between your child's education and your retirement security. We offer strategic funding solutions that protect your financial future.</p>
+                    
+                    <h4>Education Funding Options:</h4>
+                    <ul>
+                        <li><strong>Cash Value Life Insurance:</strong> Tax-free access to funds for education, with remaining death benefit for family protection</li>
+                        <li><strong>Indexed Universal Life (IUL):</strong> Market-linked growth for education savings with downside protection</li>
+                        <li><strong>Flexible Funding Strategies:</strong> Access funds for education, but if not needed, redirect to retirement</li>
+                        <li><strong>Multi-Purpose Accounts:</strong> Unlike 529 plans, these aren't limited to education expenses</li>
+                    </ul>
+
+                    <h4>Advantages Over Traditional 529 Plans:</h4>
+                    <ul>
+                        <li>No penalties if your child doesn't attend college</li>
+                        <li>Funds can be used for ANY purpose, not just qualified education expenses</li>
+                        <li>Doesn't count as heavily against financial aid calculations</li>
+                        <li>Maintains death benefit protection for your family</li>
+                        <li>Can supplement retirement if education costs are lower than expected</li>
+                    </ul>
+
+                    <h4>Perfect For:</h4>
+                    <ul>
+                        <li>Parents with young children planning ahead</li>
+                        <li>Families who want funding flexibility</li>
+                        <li>Business owners seeking multi-purpose strategies</li>
+                        <li>Grandparents wanting to help with education costs</li>
+                    </ul>
+                `
+            },
+            debt: {
+                title: "Debt Management & Consolidation",
+                content: `
+                    <h4>Break Free from High-Interest Debt</h4>
+                    <p>High-interest debt — credit cards, personal loans, medical bills — can trap you in a cycle that's hard to escape. Strategic debt consolidation can save you thousands in interest and years of payments.</p>
+                    
+                    <h4>Our Debt Solutions:</h4>
+                    <ul>
+                        <li><strong>Cash Value Life Insurance Loans:</strong> Borrow against your policy at low interest rates to pay off high-interest debt</li>
+                        <li><strong>Debt Consolidation Analysis:</strong> Comprehensive review of your debt structure and repayment options</li>
+                        <li><strong>Strategic Payment Plans:</strong> Optimize how you pay down debt to minimize total interest paid</li>
+                        <li><strong>Credit Improvement Strategies:</strong> Rebuild your credit while eliminating debt</li>
+                    </ul>
+
+                    <h4>Why This Works:</h4>
+                    <p>Credit card interest rates average 20-25%. Many personal loans charge 10-18%. When you consolidate using cash value from life insurance, you can borrow at much lower rates (often 5-8%), saving significant money and paying off debt faster.</p>
+
+                    <h4>Example Scenario:</h4>
+                    <p><strong>Before:</strong> $25,000 in credit card debt at 22% interest = $550/month in interest alone</p>
+                    <p><strong>After:</strong> Consolidate using policy loan at 6% = $125/month in interest (saving $425/month)</p>
+
+                    <h4>Who Benefits Most:</h4>
+                    <ul>
+                        <li>Families with high-interest credit card debt</li>
+                        <li>Medical debt from unexpected healthcare costs</li>
+                        <li>Anyone struggling to make minimum payments</li>
+                        <li>People wanting to improve their credit score</li>
+                    </ul>
+                `
+            },
+            life: {
+                title: "Life Insurance & Living Benefits",
+                content: `
+                    <h4>Protection When It Matters Most</h4>
+                    <p>Life insurance isn't just a death benefit — modern policies provide living benefits that protect you and your family during critical moments in life.</p>
+                    
+                    <h4>Life Insurance Coverage Types:</h4>
+                    <ul>
+                        <li><strong>Term Life Insurance:</strong> Affordable coverage for a specific period (10, 20, or 30 years)</li>
+                        <li><strong>Whole Life Insurance:</strong> Permanent coverage with guaranteed cash value growth</li>
+                        <li><strong>Indexed Universal Life (IUL):</strong> Market-linked growth potential with downside protection</li>
+                        <li><strong>Final Expense Insurance:</strong> Coverage for funeral and burial costs</li>
+                    </ul>
+
+                    <h4>Living Benefits Include:</h4>
+                    <ul>
+                        <li><strong>Critical Illness Riders:</strong> Advance death benefit if diagnosed with heart attack, stroke, cancer, or other critical conditions</li>
+                        <li><strong>Chronic Illness Riders:</strong> Access funds if you can't perform daily activities of living</li>
+                        <li><strong>Terminal Illness Riders:</strong> Receive benefits while still alive if diagnosed with terminal condition</li>
+                        <li><strong>Accelerated Death Benefit:</strong> Use your death benefit for long-term care if needed</li>
+                    </ul>
+
+                    <h4>Why I'm Passionate About This:</h4>
+                    <p>After my cardiac arrest in 2010, I understand firsthand how quickly life can change. Having the right coverage means your family is protected no matter what happens.</p>
+
+                    <h4>Coverage Amounts:</h4>
+                    <p>General rule: 10-12 times your annual income. For a family earning $50,000/year, that's $500,000-$600,000 in coverage — often more affordable than you think.</p>
+                `
+            },
+            estate: {
+                title: "Estate & Legacy Planning",
+                content: `
+                    <h4>Transfer Wealth to Your Heirs, Not the IRS</h4>
+                    <p>Without proper planning, your heirs could lose 30-40% of your estate to taxes and probate costs. Strategic estate planning ensures your legacy passes to your loved ones, not the government.</p>
+                    
+                    <h4>Estate Planning Strategies:</h4>
+                    <ul>
+                        <li><strong>Irrevocable Life Insurance Trusts (ILIT):</strong> Remove life insurance from taxable estate</li>
+                        <li><strong>Strategic Beneficiary Designations:</strong> Ensure assets pass efficiently to intended heirs</li>
+                        <li><strong>Wealth Transfer Vehicles:</strong> Use life insurance to equalize inheritances or pass tax-free wealth</li>
+                        <li><strong>Estate Tax Reduction:</strong> Minimize federal and state estate taxes</li>
+                        <li><strong>Charitable Giving Strategies:</strong> Support causes while reducing estate taxes</li>
+                    </ul>
+
+                    <h4>Common Estate Planning Mistakes:</h4>
+                    <ul>
+                        <li>Not updating beneficiaries after major life events</li>
+                        <li>Failing to plan for estate taxes on large IRA/401(k) accounts</li>
+                        <li>Not coordinating life insurance with overall estate plan</li>
+                        <li>Leaving everything to probate (expensive and public)</li>
+                        <li>Unequal inheritances causing family conflict</li>
+                    </ul>
+
+                    <h4>Estate Planning Integration:</h4>
+                    <p>While I'm not an attorney, I work closely with estate planning lawyers to ensure your life insurance and annuities integrate seamlessly with your wills, trusts, and other estate documents.</p>
+
+                    <h4>Who Needs Estate Planning:</h4>
+                    <ul>
+                        <li>Business owners with significant assets</li>
+                        <li>Anyone with estates over $1 million</li>
+                        <li>Families with complex family situations (blended families, special needs children)</li>
+                        <li>Anyone who wants to leave a legacy</li>
+                    </ul>
+                `
+            },
+            indexed: {
+                title: "Indexed Growth Strategies",
+                content: `
+                    <h4>Market Growth Without Market Risk</h4>
+                    <p>What if you could participate in stock market gains without the risk of losing money when markets crash? Indexed strategies offer exactly that — growth potential with principal protection.</p>
+                    
+                    <h4>How Indexed Products Work:</h4>
+                    <ul>
+                        <li><strong>Market Participation:</strong> Your returns are linked to stock market indexes (S&P 500, Nasdaq, etc.)</li>
+                        <li><strong>Downside Protection:</strong> When markets drop, your principal is protected (you don't lose money)</li>
+                        <li><strong>Annual Reset:</strong> Gains are locked in annually, becoming your new protected floor</li>
+                        <li><strong>Tax Advantages:</strong> Growth is tax-deferred in annuities and tax-free in IUL policies</li>
+                    </ul>
+
+                    <h4>Types of Indexed Products:</h4>
+                    <ul>
+                        <li><strong>Fixed Indexed Annuities (FIA):</strong> Safe-money growth for retirement income</li>
+                        <li><strong>Indexed Universal Life (IUL):</strong> Life insurance with cash value growth potential</li>
+                        <li><strong>Hybrid Products:</strong> Combine features of multiple indexed strategies</li>
+                    </ul>
+
+                    <h4>Real Example:</h4>
+                    <p><strong>2008 Financial Crisis:</strong><br>
+                    Stock market investors: Lost 37% of their portfolio<br>
+                    Indexed product owners: Lost nothing, principal protected at previous high</p>
+
+                    <p><strong>2009-2019 Bull Market:</strong><br>
+                    Stock market investors: Gained value (with volatility)<br>
+                    Indexed product owners: Participated in gains (capped, but with zero downside risk)</p>
+
+                    <h4>Perfect For:</h4>
+                    <ul>
+                        <li>Pre-retirees who can't afford market losses</li>
+                        <li>Conservative investors wanting growth potential</li>
+                        <li>Anyone who lost money in 2008 and wants protection</li>
+                        <li>Retirees needing income with growth potential</li>
+                    </ul>
+                `
+            },
+            mortgage: {
+                title: "Mortgage Protection Insurance",
+                content: `
+                    <h4>Keep Your Family in Their Home</h4>
+                    <p>Your mortgage is likely your largest monthly expense. If something happens to you, could your family afford to stay in their home? Mortgage protection ensures they can.</p>
+                    
+                    <h4>How Mortgage Protection Works:</h4>
+                    <ul>
+                        <li><strong>Declining Coverage:</strong> Death benefit matches your remaining mortgage balance</li>
+                        <li><strong>Level Coverage:</strong> Fixed death benefit that covers mortgage plus additional expenses</li>
+                        <li><strong>Your Family Owns It:</strong> Unlike bank mortgage insurance, your family receives the money, not the bank</li>
+                        <li><strong>Flexibility:</strong> Beneficiaries can use funds to pay off mortgage or keep making payments if they prefer</li>
+                    </ul>
+
+                    <h4>Why Not Bank Mortgage Insurance?:</h4>
+                    <p>Most banks offer mortgage insurance when you buy a home. Here's why our solutions are better:</p>
+                    <ul>
+                        <li><strong>Bank Insurance:</strong> Bank is beneficiary, they get the money, not your family</li>
+                        <li><strong>Our Insurance:</strong> Your family is beneficiary, they decide how to use the money</li>
+                        <li><strong>Bank Insurance:</strong> Coverage decreases as you pay down mortgage, but premium stays same</li>
+                        <li><strong>Our Insurance:</strong> Premium is fixed and often costs less</li>
+                        <li><strong>Bank Insurance:</strong> Only covers mortgage, nothing else</li>
+                        <li><strong>Our Insurance:</strong> Can also cover other expenses, provide income replacement, etc.</li>
+                    </ul>
+
+                    <h4>Coverage Calculation:</h4>
+                    <p>Typical recommendation: Mortgage balance + 3-6 months of living expenses</p>
+                    <p><strong>Example:</strong> $200,000 mortgage + $15,000 emergency fund = $215,000 coverage</p>
+
+                    <h4>Who Needs This:</h4>
+                    <ul>
+                        <li>New homeowners with large mortgages</li>
+                        <li>Single-income families</li>
+                        <li>Anyone whose family couldn't afford the mortgage without their income</li>
+                        <li>Self-employed individuals with variable income</li>
+                    </ul>
+                `
+            },
+            business: {
+                title: "Business & Key-Person Insurance",
+                content: `
+                    <h4>Protect Your Business from the Unexpected</h4>
+                    <p>What happens to your business if a key employee, partner, or owner dies unexpectedly? Key-person insurance ensures your business survives and thrives.</p>
+                    
+                    <h4>Key-Person Insurance Solutions:</h4>
+                    <ul>
+                        <li><strong>Revenue Protection:</strong> Cover lost revenue and expenses while finding a replacement</li>
+                        <li><strong>Loan Collateral:</strong> Use policy as collateral for business loans</li>
+                        <li><strong>Recruitment Costs:</strong> Fund the search and training of a replacement</li>
+                        <li><strong>Succession Planning:</strong> Fund buy-sell agreements to transfer ownership</li>
+                    </ul>
+
+                    <h4>Business Continuation Planning:</h4>
+                    <ul>
+                        <li><strong>Buy-Sell Agreements:</strong> Life insurance funds the purchase of a deceased partner's share</li>
+                        <li><strong>Cross-Purchase Plans:</strong> Partners own insurance on each other</li>
+                        <li><strong>Entity Purchase Plans:</strong> Business owns insurance on key people</li>
+                        <li><strong>Deferred Compensation:</strong> Retain key employees with tax-advantaged benefits</li>
+                    </ul>
+
+                    <h4>School District Specialty:</h4>
+                    <p>I specialize in helping school districts across Schuylkill, Luzerne, and Northumberland counties protect key administrators, superintendents, and essential staff. When a critical leader leaves unexpectedly, it can disrupt operations and cost the district significantly.</p>
+
+                    <h4>Tax Advantages:</h4>
+                    <ul>
+                        <li>Premiums may be tax-deductible as business expense</li>
+                        <li>Death benefits are generally income tax-free</li>
+                        <li>Cash value growth is tax-deferred</li>
+                    </ul>
+
+                    <h4>Who Needs This:</h4>
+                    <ul>
+                        <li>Small businesses with key employees</li>
+                        <li>Partnerships and multi-owner businesses</li>
+                        <li>Family businesses planning succession</li>
+                        <li>School districts and municipal organizations</li>
+                        <li>Any business that would suffer financial loss from losing a critical person</li>
+                    </ul>
+                `
+            },
+            retirement: {
+                title: "Retirement Income Strategies",
+                content: `
+                    <h4>Guaranteed Lifetime Income You Can't Outlive</h4>
+                    <p>The biggest fear in retirement isn't dying too soon — it's living too long and running out of money. Our retirement income strategies provide guaranteed income for life, no matter how long you live.</p>
+                    
+                    <h4>Retirement Income Solutions:</h4>
+                    <ul>
+                        <li><strong>Fixed Indexed Annuities:</strong> Principal protection with growth potential and lifetime income riders</li>
+                        <li><strong>Immediate Annuities:</strong> Convert lump sum to guaranteed monthly income starting now</li>
+                        <li><strong>Deferred Income Annuities:</strong> Lock in future income rates today</li>
+                        <li><strong>Hybrid Solutions:</strong> Combine growth, income, and long-term care benefits</li>
+                    </ul>
+
+                    <h4>Income Planning Strategies:</h4>
+                    <ul>
+                        <li><strong>Social Security Optimization:</strong> Coordinate annuities with Social Security to maximize total income</li>
+                        <li><strong>Pension Maximization:</strong> Evaluate pension options and supplement with life insurance</li>
+                        <li><strong>Tax-Efficient Withdrawal:</strong> Structure income to minimize tax burden</li>
+                        <li><strong>Inflation Protection:</strong> Build in cost-of-living increases</li>
+                    </ul>
+
+                    <h4>Why Annuities for Retirement?:</h4>
+                    <ul>
+                        <li><strong>Guaranteed Income:</strong> You can't outlive your money</li>
+                        <li><strong>No Market Risk:</strong> Principal protected from stock market crashes</li>
+                        <li><strong>Tax Advantages:</strong> Tax-deferred growth, only pay taxes when you take income</li>
+                        <li><strong>Death Benefits:</strong> Remaining balance passes to heirs</li>
+                        <li><strong>Probate Avoidance:</strong> Passes directly to beneficiaries, bypassing probate</li>
+                    </ul>
+
+                    <h4>Example Retirement Plan:</h4>
+                    <p><strong>Age 60:</strong> Invest $250,000 in fixed indexed annuity<br>
+                    <strong>Age 70:</strong> Begin taking $22,000/year guaranteed for life<br>
+                    <strong>Plus:</strong> Social Security of $28,000/year<br>
+                    <strong>Total:</strong> $50,000/year guaranteed income you cannot outlive</p>
+
+                    <h4>Perfect For:</h4>
+                    <ul>
+                        <li>Pre-retirees within 10 years of retirement</li>
+                        <li>Recent retirees needing income structure</li>
+                        <li>Anyone worried about outliving their money</li>
+                        <li>People who want to eliminate market risk in retirement</li>
+                    </ul>
+                `
+            }
+        };
+
+        // Add click handlers to service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                e.preventDefault();
+                const service = this.getAttribute('data-service');
+                showServiceModal(service);
+            });
+        });
+
+        function showServiceModal(service) {
+            const modal = document.getElementById('serviceModal');
+            const details = serviceDetails[service];
+            
+            if (details) {
+                document.getElementById('modalTitle').textContent = details.title;
+                document.getElementById('modalContent').innerHTML = details.content;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeServiceModal() {
+            const modal = document.getElementById('serviceModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('serviceModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeServiceModal();
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
